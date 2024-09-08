@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { RegisterComponent } from './register/register.component';
+import { RegisterComponent } from './components/register/register.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full', title: 'Hihi-Shop' },
@@ -7,15 +7,16 @@ export const routes: Routes = [
   {
     path: 'login',
     loadChildren: () =>
-      import('./login/login.router').then((r) => r.LOGIN_ROUTES),
+      import('./components/login/login.router').then((r) => r.LOGIN_ROUTES),
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.router').then((b) => b.HOME_ROUTES),
+    loadChildren: () =>
+      import('./components/home/home.router').then((b) => b.HOME_ROUTES),
   },
   {
     path: 'order',
     loadChildren: () =>
-      import('./order/order.router').then((cx) => cx.ORDER_ROUTES),
+      import('./components/order/order.router').then((cx) => cx.ORDER_ROUTES),
   },
 ];

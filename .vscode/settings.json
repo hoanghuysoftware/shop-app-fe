@@ -1,0 +1,5 @@
+{
+  "javascript.format.insertSpaceAfterConstructor": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": null
+}

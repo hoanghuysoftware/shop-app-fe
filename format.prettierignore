@@ -1,0 +1,8 @@
+# Bỏ qua thư mục node_modules
+node_modules
+
+# Bỏ qua các file build
+dist
+
+# Bỏ qua các file cụ thể khác nếu cần
+*.min.js

@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-md-6 offset-md-3">
+      <form #loginForm="ngForm">
+        <div class="login-form mx-auto">
+          <h2 class="login-header">Đăng nhập</h2>
+          <div class="form-group">
+            <label for="email">Email/Phone Number:</label>
+            <input (input)="onChangePhoneNumber()" [(ngModel)]='phoneNumber' type="text" name="phoneNumber"
+              id="phoneNumber" class="form-control" placeholder="Nhập e-mail hoặc số điện thoại" />
+            <div class="divider-nospace"></div>
+          </div>
+
+          <div class="mt-5"></div>
+
+          <div class="form-group password-filed">
+            <label for="password">Mật khẩu</label>
+            <div class="wapper-input-password">
+              <input type="password" name="password" id="password" class="form-control" placeholder="Nhập mật khẩu"
+                [(ngModel)]='password' />
+              <i class="fa-solid fa-eye-slash icon-eye"></i>
+            </div>
+            <div class="divider-nospace"></div>
+          </div>
+
+          <div class="form-group">
+            <div class="form-check checkbox-text">
+              <span style="display: flex">
+                <input type="checkbox" name="remember" id="remember" class="form-check-input" />
+                <label for="remember">Ghi nhớ đăng nhập</label>
+              </span>
+              <a href="#" class="register-link">Quên mật khẩu</a>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <select name="role-name" id="role-name" class="form-control access-right">
+              <option disabled selected>-- Chọn vai trò --</option>
+              <option value="USER">Người mua hàng</option>
+              <option value="ADMIN">Quản trị viên</option>
+            </select>
+          </div>
+          <button type="button" class="login-button" (click)="onLogin()">Đăng nhập</button>
+          <div class="divider"></div>
+          <p class="text-center mt-3">
+            Bạn chưa có tài khoản?
+            <a routerLink="/register" class="register-link">Đăng ký ngay</a>
+            <br />
+            Hãy liên hệ với chúng tôi khi gặp sự cố để được hỗ trợ tư vấn.
+            <br />
+            Hotline: 035.2863.065
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
