@@ -53,7 +53,7 @@ export class LoginComponent {
       next: (response: LoginResponse) => {
         console.log(response);
         this.tokenService.setToken(response.token);
-        // this.router.navigate(['/']);
+        this.router.navigate(['/']);
       },
       complete: () => {
         console.log('Register complete');
